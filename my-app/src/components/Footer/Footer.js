@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Home() {
+export default function Footer() {
     return (
         <div>
-            <p>test Home</p>
+            <p>test Footer</p>
         </div>
     )
 }

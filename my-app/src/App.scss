@@ -1,7 +1,11 @@
-
-// style
-$mainColor: white;
+// style de base de l'app Kasa
+$bgColor: hsl(0, 0%, 100%);
+$mainColor: hsl(0, 100%, 69%);
 
 body {
-  background-color: $mainColor;
+  background-color: $bgColor;
+}
+
+a {
+  color: $mainColor;
 }

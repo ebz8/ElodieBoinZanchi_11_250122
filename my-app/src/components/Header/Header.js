@@ -1,13 +1,17 @@
 import React from 'react'
 
 import './Header.scss'
-import Logo from '../Logo/Logo'
+import { ReactComponent as Logo } from '../../assets/logo.svg'
 import Navbar from '../Navbar/Navbar'
+
+import { Link } from 'react-router-dom'
 
 export default function Header() {
     return (
         <div className='banniere'>
-            <Logo />
+            <Link to="/">
+                <Logo alt="Kasa" className="logo"/>
+            </Link>
             <Navbar />
         </div>
     )

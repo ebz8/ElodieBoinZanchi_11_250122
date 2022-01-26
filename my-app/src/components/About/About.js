@@ -2,10 +2,13 @@ import React from 'react'
 
 import Banner from '../Banner/Banner'
 
+import bannerImg from '../../assets/banniere-apropos.png'
+
+
 export default function About() {
     return (
         <div>
-            <Banner img="../../assets/banniere-apropos.png" alt="bannière" texte ="Chez vous, partout et ailleurs" />
+            <Banner img={bannerImg} alt="bannière" />
         </div>
     )
 }

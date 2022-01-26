@@ -1,14 +1,24 @@
-import React from 'react';
+import React from 'react'
 
 import './Gallery.scss'
-
+// remplacer par un fetch ? est-ce la bonne façon de récup. données json ?
+import { housingData } from '../../assets/data/logements'
+import Housing from '../Housing/Housing'
 
 export default function Gallery() {
+
+    // function createItem(item) {
+    //     return (
+    //     <li>{item.id}</li>
+    //     )
+    // }
+
   return (
         <div className='gallery'>
             <ul>
-            {/* data.map -> créer un li avec id */}
-                <li>logement 1</li>
+                {housingData.map((housing) => {
+                   return <li key={housing.id}>logement n°{housing.id}</li>
+                })}
             </ul>
         </div>
     );

@@ -1,11 +1,17 @@
 // style de base de l'app Kasa
+
+// comment gérer les variables et mixins ?
 $bgColor: hsl(0, 0%, 100%);
 $mainColor: hsl(0, 100%, 69%);
+// $marginBase: .5rem 4rem 0rem;
 
 body {
   background-color: $bgColor;
-  margin: .5rem 4rem 0rem;
   font-family: Montserrat;
+}
+
+main {
+  margin: 1rem 4rem;
 }
 
 a {

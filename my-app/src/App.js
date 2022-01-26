@@ -1,11 +1,8 @@
 import './App.scss'
 import {Routes, Route} from "react-router-dom"
 
-// données
-import { housingData } from '../src/data/logements'
-
 // fonts
-import './fonts/fonts.scss'
+import '../src/assets/fonts/fonts.scss'
 
 // components
 import Home from './components/Home/Home'
@@ -20,12 +17,14 @@ function App() {
   return (
       <div className="App">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/logement/:id" element={<Housing />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="/404" element={<Error404 />}/>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/logement/:id" element={<Housing />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/404" element={<Error404 />}/>
+        </Routes>
+      </main>
       <Footer />
       </div>
   );

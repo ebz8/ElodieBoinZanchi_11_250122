@@ -4,6 +4,9 @@ import {Routes, Route} from "react-router-dom"
 // données
 import { housingData } from '../src/data/logements'
 
+// fonts
+import './fonts/fonts.scss'
+
 // components
 import Home from './components/Home/Home'
 import Header from './components/Header/Header'

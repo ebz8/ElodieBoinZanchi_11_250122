@@ -5,8 +5,10 @@
 // vérifier que le normalize est bien pris en compte et ce qu'il contient en précision
 // https://create-react-app.dev/docs/adding-css-reset/
 // https://github.com/csstools/postcss-normalize
-@import-normalize;
-
+// @import-normalize;
+*{
+  box-sizing: border-box;
+}
 
 h1, h2, h3, h4, h5, p{
   margin: 0;

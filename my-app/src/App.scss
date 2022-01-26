@@ -8,4 +8,8 @@ body {
 
 a {
   color: $mainColor;
+
+  &.--actif {
+    text-decoration: underline;
+  }
 }

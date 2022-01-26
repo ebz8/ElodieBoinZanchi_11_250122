@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 export default function Navbar() {
@@ -7,10 +7,18 @@ export default function Navbar() {
     <nav>
     <ul className='navigation'>
         <li>
-            <Link to="/">Accueil</Link>
+            <NavLink to="/" className={({ isActive }) => {
+                return isActive ? "--actif" : ""
+            }}>
+                Accueil
+            </NavLink>
         </li>
         <li>
-            <Link to="/about">À propos</Link>
+        <NavLink to="/about" className={({ isActive }) => {
+                return isActive ? "--actif" : ""
+            }}>
+                À propos
+            </NavLink>
         </li>
     </ul>
 </nav>

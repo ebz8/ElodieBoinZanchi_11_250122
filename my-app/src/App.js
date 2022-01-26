@@ -1,6 +1,9 @@
 import './App.scss'
 import {Routes, Route} from "react-router-dom"
 
+// données
+import { housingData } from '../src/data/logements'
+
 // components
 import Home from './components/Home/Home'
 import Header from './components/Header/Header'

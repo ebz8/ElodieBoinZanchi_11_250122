@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from '../Banner/Banner'
 import Gallery from '../Gallery/Gallery'
 
+import './Home.scss'
 import bannerImg from '../../assets/banniere-accueil.png'
 
 // import { Data } from '../../data/logements'

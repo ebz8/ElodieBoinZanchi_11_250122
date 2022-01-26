@@ -1,0 +1,16 @@
+// style composant Home
+
+.banner {
+    // filtre dégradé : proposer via une classe plutôt ?
+    // ou mixin pour la gestion du dégradé
+    &:after {
+        content: '';
+        z-index: -1;
+        position:absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,0.39537821964723385) 0%, rgba(255,255,255,0.09563612110607256) 100%); 
+    }
+}

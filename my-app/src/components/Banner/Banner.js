@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import './Banner.scss'
+import './Banner.scss'
 
 export default function Banner(props) {
     const texte = props.texte
@@ -8,7 +8,7 @@ export default function Banner(props) {
     return (
     <div className='banner'>
         <img src={props.img} alt={props.alt} />
-        {texte ? <p className='title'>{texte}</p> : ""}
+        {texte ? <h1 className='title'>{texte}</h1> : ""}
     </div>
     )
 }

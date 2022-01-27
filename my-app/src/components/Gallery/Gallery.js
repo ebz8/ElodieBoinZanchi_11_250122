@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './Gallery.scss'
 // remplacer par un fetch ? est-ce la bonne façon de récup. données json ?
 import { housingData } from '../../assets/data/logements'
@@ -21,5 +19,5 @@ export default function Gallery() {
                 })}
             </ul>
         </div>
-    );
+    )
 }

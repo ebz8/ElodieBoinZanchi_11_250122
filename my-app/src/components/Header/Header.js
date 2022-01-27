@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './Header.scss'
 import { ReactComponent as Logo } from '../../assets/logo.svg'
 import Navbar from '../Navbar/Navbar'

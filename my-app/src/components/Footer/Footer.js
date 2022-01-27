@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './Footer.scss'
 import { ReactComponent as Logo } from '../../assets/logo-white.svg'
 

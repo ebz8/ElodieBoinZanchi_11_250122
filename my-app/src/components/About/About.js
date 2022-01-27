@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Banner from '../Banner/Banner'
 
 import bannerImg from '../../assets/banniere-apropos.png'

@@ -10,6 +10,13 @@ body {
   font-family: Montserrat;
 }
 
+// pousser le footer en bas de la page
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   margin: 1rem 4rem;
 }

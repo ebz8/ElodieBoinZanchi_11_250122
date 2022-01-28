@@ -2,22 +2,34 @@ import './Gallery.scss'
 // remplacer par un fetch ? est-ce la bonne façon de récup. données json ?
 import { housingData } from '../../assets/data/logements'
 import Housing from '../Housing/Housing'
+import { Link } from 'react-router-dom'
+import Thumbnail from '../Thumbnail/Thumbnail'
 
 export default function Gallery() {
 
-    // function createItem(item) {
+    // const createHousing = housing => {
     //     return (
-    //     <li>{item.id}</li>
+    //     <li key={housing.id}>
+    //         <Link to={`/housing/${housing.id}`}>
+    //             <img src={housing.pictures[0]} alt={housing.title} />
+    //             <h3>{housing.title}</h3>                
+    //         </Link>
+    //     </li>
     //     )
     // }
 
-  return (
-        <div className='gallery'>
-            <ul>
-                {housingData.map((housing) => {
-                   return <li key={housing.id}>logement n°{housing.id}</li>
-                })}
-            </ul>
-        </div>
-    )
+    return (
+        //   <div className='gallery'>
+              <ul className='gallery'>
+                  {housingData.map((housing) => {
+                      return <Thumbnail
+                                key={housing.id}
+                                id={housing.id}
+                                img={housing.pictures[0]}
+                                titre={housing.title}
+                            />
+                  })}
+              </ul>
+        //   </div>
+      )
 }

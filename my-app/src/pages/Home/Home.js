@@ -9,7 +9,7 @@ import bannerImg from '../../assets/banniere-accueil.png'
 export default function Home() {
     return (
         <div className='home'>
-            <Banner img={bannerImg} alt="bannière" texte ="Chez vous, partout et ailleurs" />
+            <Banner img={bannerImg} alt="bannière" texte ="Chez vous, partout et ailleurs"/>
             <Gallery />
         </div>
     )

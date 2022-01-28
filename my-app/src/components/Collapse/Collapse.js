@@ -19,6 +19,7 @@ export default function Collapse(props) {
 
   const refHeight = useRef()
   
+  // refaire le collapse en version accessible AAA
   return (
       <div className="collapse">
         <button onClick={toggleState} className="collapse-bar">

@@ -1,5 +1,9 @@
 // style composant About
 .about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
     .banner {
         img {
             filter: brightness(70%);

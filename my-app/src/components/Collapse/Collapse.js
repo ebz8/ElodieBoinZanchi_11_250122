@@ -1,6 +1,9 @@
 import './Collapse.scss'
 import { useEffect, useState, useRef } from 'react'
 
+import { ReactComponent as CloseIcon } from '../../assets/icons/chevron-down.svg'
+
+
 export default function Collapse(props) {
   
   const [toggle, setToggle] = useState(false)
@@ -18,10 +21,10 @@ export default function Collapse(props) {
   
   return (
       <div className="collapse">
-        <div onClick={toggleState} className="collapse-bar">
+        <button onClick={toggleState} className="collapse-bar">
           <h2>{props.titre}</h2>
-          <i class="fas fa-chevron-down"></i>
-        </div>
+          <CloseIcon alt="Déplier / Replier" className={toggle ? 'close-icon open' : 'close-icon'}/>
+        </button>
 
         <div ref={refHeight}
         className={toggle ? 'collapse-content open' : 'collapse-content'}

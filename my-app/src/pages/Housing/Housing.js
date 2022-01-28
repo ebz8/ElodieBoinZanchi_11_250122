@@ -16,8 +16,8 @@ export default function Housing(props) {
         .then(
             (result) => {
                 setIsLoaded(true)
-                const searchCurrentHousing = result.find(housing => housing.id === currentHousingId)
-                setCurrentHousing(searchCurrentHousing)
+                const findCurrentHousing = result.find(housing => housing.id === currentHousingId)
+                setCurrentHousing(findCurrentHousing)
             },
             (error) => {
                 setIsLoaded(true)
@@ -25,17 +25,17 @@ export default function Housing(props) {
             }
         )
     }
-    
+
     useEffect(() => {
         fetchData()    
       }, [])
     
     if (error) {
         return <div>Erreur : {error.message}</div>  
-    }
-    else if (!isLoaded) {
+    } else if (!isLoaded) {
         return <div>Chargement...</div>
     }
+
     else {
         return (
             <div>

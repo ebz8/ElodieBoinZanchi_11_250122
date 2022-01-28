@@ -30,10 +30,10 @@ export default function Gallery() {
 
     if (error) {
         return <div>Erreur : {error.message}</div>  
-    }
-    else if (!isLoaded) {
+    } else if (!isLoaded) {
         return <div>Chargement...</div>
     }
+
     else {
         return (
             //   <div className='gallery'>

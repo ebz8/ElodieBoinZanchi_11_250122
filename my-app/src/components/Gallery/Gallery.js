@@ -9,12 +9,11 @@ export default function Gallery() {
     const [isLoaded, setIsLoaded] = useState(false)
     const [housings, setHousings] = useState([])
     
-    useEffect(() => {
+    const fetchData = () => {
         fetch('./data/data.json')
           .then(res => res.json())
           .then(
             (result) => {
-                console.log(result)
                 setIsLoaded(true)
                 setHousings(result)
             },
@@ -23,13 +22,19 @@ export default function Gallery() {
                 setError(error)
             }
         )
+    }
+
+    useEffect(() => {
+        fetchData()
       }, [])
 
     if (error) {
-        return <div>Erreur : {error.message}</div>
-    } else if (!isLoaded) {
+        return <div>Erreur : {error.message}</div>  
+    }
+    else if (!isLoaded) {
         return <div>Chargement...</div>
-    } else {
+    }
+    else {
         return (
             //   <div className='gallery'>
                   <ul className='gallery'>

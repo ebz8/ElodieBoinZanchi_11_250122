@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
+import Collapse from '../../components/Collapse/Collapse'
+
 export default function Housing(props) {
     // récupère l'id du logement en cours
     const params = useParams()
@@ -40,6 +42,14 @@ export default function Housing(props) {
         return (
             <div>
                 <p>bienvenue dans ce {currentHousing.title}</p>
+                <Collapse
+                    titre="Description"
+                    texte={currentHousing.description}
+                />
+                <Collapse
+                    titre="Équipements"
+                    liste={currentHousing.equipments}
+                />
             </div>
         )
     }

@@ -20,7 +20,8 @@ export default function Collapse(props) {
   const refHeight = useRef()
   
   // refaire le collapse en version accessible AAA
-  return (
+  if (props.liste) {
+    return (
       <div className="collapse">
         <button onClick={toggleState} className="collapse-bar">
           <h2>{props.titre}</h2>
@@ -30,8 +31,30 @@ export default function Collapse(props) {
         <div ref={refHeight}
         className={toggle ? 'collapse-content open' : 'collapse-content'}
         style={{height: toggle ? `${heightEl}`: `0px`}}>
-          <p aria-hidden={toggle ? 'true' : 'false'}>{props.texte}</p>
+          <ul aria-hidden={toggle ? 'true' : 'false'}>
+            {props.liste.map((item) => {
+              return <li key={item}>{item}</li>
+            })}
+          </ul>
         </div>
       </div>
   )
+
+  } else {
+    return (
+        <div className="collapse">
+          <button onClick={toggleState} className="collapse-bar">
+            <h2>{props.titre}</h2>
+            <CloseIcon alt="Déplier / Replier" className={toggle ? 'close-icon open' : 'close-icon'}/>
+          </button>
+  
+          <div ref={refHeight}
+          className={toggle ? 'collapse-content open' : 'collapse-content'}
+          style={{height: toggle ? `${heightEl}`: `0px`}}>
+            <p aria-hidden={toggle ? 'true' : 'false'}>{props.texte}</p>
+          </div>
+        </div>
+    )
+  }
+
 }

@@ -1,7 +1,7 @@
 import './Gallery.scss'
 // remplacer par un fetch ? est-ce la bonne façon de récup. données json ?
 import { housingData } from '../../assets/data/logements'
-import Housing from '../Housing/Housing'
+import Housing from '../../pages/Housing/Housing'
 import { Link } from 'react-router-dom'
 import Thumbnail from '../Thumbnail/Thumbnail'
 

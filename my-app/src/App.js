@@ -4,13 +4,14 @@ import {Routes, Route} from "react-router-dom"
 // fonts
 import '../src/assets/fonts/fonts.scss'
 
-// components
-import Home from './components/Home/Home'
+// pages et composants layout
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import Housing from './components/Housing/Housing'
-import About from './components/About/About'
-import Error404 from './components/Error404/Error404'
+
+import Home from './pages/Home/Home'
+import Housing from './pages/Housing/Housing'
+import About from './pages/About/About'
+import Error404 from './pages/Error404/Error404'
 
 
 function App() {

@@ -1,5 +1,5 @@
-import Banner from '../Banner/Banner'
-import Gallery from '../Gallery/Gallery'
+import Banner from '../../components/Banner/Banner'
+import Gallery from '../../components/Gallery/Gallery'
 
 import './Home.scss'
 import bannerImg from '../../assets/banniere-accueil.png'

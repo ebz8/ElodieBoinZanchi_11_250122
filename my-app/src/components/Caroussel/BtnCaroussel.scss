@@ -1,0 +1,15 @@
+.caroussel-btn {
+    width: 2rem;
+
+    .prev {
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-60%);
+    }
+
+    .next {
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-60%);
+    }
+}

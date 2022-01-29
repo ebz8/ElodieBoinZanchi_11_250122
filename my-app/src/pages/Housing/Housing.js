@@ -45,7 +45,7 @@ export default function Housing() {
     } else {
         return (
             <div className='housing'>
-                <Caroussel />
+                <Caroussel images={currentHousing.pictures} description={currentHousing.title}/>
                 <HousingInfos {...currentHousing}/>
                 <div className="collapses">
                     <Collapse titre="Description" texte={currentHousing.description}/>

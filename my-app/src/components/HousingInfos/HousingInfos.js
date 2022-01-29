@@ -4,7 +4,6 @@ import Host from "../Host/Host"
 import Rate from "../Rate/Rate"
 
 export default function HousingInfos(props) {
-console.log(props.tags)
   return (
     <div className='infos'>
             <div className='infos-section'>

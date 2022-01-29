@@ -29,8 +29,10 @@ export default function Gallery() {
       }, [])
 
     if (error) {
+        // gestion des erreurs ici
         return <div>Erreur : {error.message}</div>  
     } else if (!isLoaded) {
+        // insérer ici un loader
         return <div>Chargement...</div>
     }
 
@@ -39,9 +41,7 @@ export default function Gallery() {
             //   <div className='gallery'>
                   <ul className='gallery'>
                       {housings.map((housing) => {
-                          return <Thumbnail
-                                    { ...housing}
-                                />
+                          return <Thumbnail { ...housing}/>
                       })}
                   </ul>
             //   </div>

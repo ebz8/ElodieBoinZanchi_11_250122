@@ -2,12 +2,11 @@
 $borderRadius: .5rem;
 
 .collapse {
-    max-width: 1000px;
+    max-width: 60rem;
     height: auto;
     margin-bottom: 1rem;
     background-color: hsl(0, 0%, 96%);
     border-radius: $borderRadius;
-    overflow: hidden;
     
     .collapse-bar{
         cursor: pointer;
@@ -22,27 +21,34 @@ $borderRadius: .5rem;
 
         .close-icon {
             width: 1.1rem;
-            transition: transform .3s ease-in-out;
+            transition: transform .1s ease-in-out;
         }
+
+        &[aria-expanded="true"] {
+            .close-icon {
+            transform: rotate(180deg);
+            transition: transform .1s ease-in-out;
+            }
+        }
+
     }
 
     .collapse-content{
         color: hsl(0, 100%, 69%);
-        opacity: 0;
-        transition: opacity .1s ease-in-out, height .3s .1s ease-in-out;
-    
-        p {
-            padding : 2rem 1rem 1rem;
+        display: none;
+        padding : 2rem 1rem 1rem;
+        // opacity: 0;
+        // transition: opacity .1s ease-in-out, height .3s .1s ease-in-out;
+
+        &[aria-hidden="false"] {
+            opacity: 1;
+            display: block;
         }
     }
 
-    .open {
-        opacity: 1;
-        transition: height .1s ease-in-out, opacity .3 .1s ease-in-out;
 
-        &.close-icon {
-            transform: rotate(180deg);
-            transition: transform .3s ease-in-out;
-        }
-    }
+    // .open {
+    //     opacity: 1;
+    //     transition: height .1s ease-in-out, opacity .3 .1s ease-in-out;
+    // }
 }

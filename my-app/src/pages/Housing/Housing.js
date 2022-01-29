@@ -33,8 +33,10 @@ export default function Housing(props) {
       }, [])
     
     if (error) {
+        // gestion visuelle des erreurs
         return <div>Erreur : {error.message}</div>  
     } else if (!isLoaded) {
+        // insérer ici un loader
         return <div>Chargement...</div>
     }
 

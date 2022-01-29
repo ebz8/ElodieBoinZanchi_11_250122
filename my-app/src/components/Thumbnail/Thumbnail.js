@@ -6,8 +6,8 @@ export default function Thumbnail(props) {
   return (
         <li key={props.id} className="thumbnail">
             <Link to={`/housing/${props.id}`}>
-                <img src={props.img} alt={props.titre} />
-                <h3>{props.titre}</h3>                
+                <img src={props.cover} alt={props.title} />
+                <h3>{props.title}</h3>                
             </Link>
         </li>
         )

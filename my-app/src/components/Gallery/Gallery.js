@@ -40,10 +40,7 @@ export default function Gallery() {
                   <ul className='gallery'>
                       {housings.map((housing) => {
                           return <Thumbnail
-                                    key={housing.id}
-                                    id={housing.id}
-                                    img={housing.pictures[0]}
-                                    titre={housing.title}
+                                    { ...housing}
                                 />
                       })}
                   </ul>

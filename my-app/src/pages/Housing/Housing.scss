@@ -1,0 +1,11 @@
+// style des pages logement
+
+.housing {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
+
+    .collapses {
+        width: 100%;
+    }
+}

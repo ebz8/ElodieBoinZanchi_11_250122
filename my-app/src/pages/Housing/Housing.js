@@ -1,9 +1,13 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
+import './Housing.scss'
 import Collapse from '../../components/Collapse/Collapse'
+import Caroussel from '../../components/Caroussel/Caroussel'
+import HousingInfos from '../../components/HousingInfos/HousingInfos'
 
-export default function Housing(props) {
+
+export default function Housing() {
     // récupère l'id du logement en cours
     const params = useParams()
     const currentHousingId = params.id
@@ -17,9 +21,9 @@ export default function Housing(props) {
         .then(res => res.json())
         .then(
             (result) => {
-                setIsLoaded(true)
                 const findCurrentHousing = result.find(housing => housing.id === currentHousingId)
                 setCurrentHousing(findCurrentHousing)
+                setIsLoaded(true)
             },
             (error) => {
                 setIsLoaded(true)
@@ -32,27 +36,22 @@ export default function Housing(props) {
         fetchData()    
       }, [])
     
-    if (error) {
-        // gestion visuelle des erreurs
+      if (error) {
+        // gestion des erreurs ici
         return <div>Erreur : {error.message}</div>  
     } else if (!isLoaded) {
         // insérer ici un loader
         return <div>Chargement...</div>
-    }
-
-    else {
+    } else {
         return (
-            <div>
-                <p>bienvenue dans ce {currentHousing.title}</p>
-                <Collapse
-                    titre="Description"
-                    texte={currentHousing.description}
-                />
-                <Collapse
-                    titre="Équipements"
-                    liste={currentHousing.equipments}
-                />
+            <div className='housing'>
+                <Caroussel />
+                <HousingInfos {...currentHousing}/>
+                <div className="collapses">
+                    <Collapse titre="Description" texte={currentHousing.description}/>
+                    <Collapse titre="Équipements" liste={currentHousing.equipments}/>
+                </div>
             </div>
-        )
+          )
+        }
     }
-}

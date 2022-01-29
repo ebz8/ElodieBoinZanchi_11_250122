@@ -1,0 +1,17 @@
+.error404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    color: hsl(0, 100%, 69%);
+
+    a {
+        margin: 5rem;
+        text-decoration: underline;
+    }
+
+    h2 {
+        font-size: 288px;
+        font-weight: bold;
+    }
+}

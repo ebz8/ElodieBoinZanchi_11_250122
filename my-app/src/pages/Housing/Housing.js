@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 import './Housing.scss'
 import Collapse from '../../components/Collapse/Collapse'
-import Caroussel from '../../components/Caroussel/Caroussel'
+import Carousel from '../../components/Carousel/Carousel'
 import HousingInfos from '../../components/HousingInfos/HousingInfos'
 
 
@@ -45,7 +45,7 @@ export default function Housing() {
     } else {
         return (
             <div className='housing'>
-                <Caroussel images={currentHousing.pictures} description={currentHousing.title}/>
+                <Carousel images={currentHousing.pictures} description={currentHousing.title}/>
                 <HousingInfos {...currentHousing}/>
                 <div className="collapses">
                     <Collapse titre="Description" texte={currentHousing.description}/>

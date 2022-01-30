@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
-import './Caroussel.scss'
-import BtnCaroussel from './BtnCaroussel'
+import './Carousel.scss'
+import BtnCarousel from './BtnCarousel'
 
 
-export default function Caroussel(props) {
+export default function Carousel(props) {
 
   const [currentImg, setCurrentImg] = useState({
     index: 1,
@@ -28,11 +28,11 @@ export default function Caroussel(props) {
   }
 
   return (
-    <div className="caroussel">
+    <div className="Carousel">
 
-      {/* boutons de contrôle du caroussel */}
-      <BtnCaroussel changeImg={prevImg} direction={"prev"}/>
-      <BtnCaroussel changeImg={nextImg} direction={"next"}/>
+      {/* boutons de contrôle du Carousel */}
+      <BtnCarousel changeImg={prevImg} direction={"prev"}/>
+      <BtnCarousel changeImg={nextImg} direction={"next"}/>
 
       {/* affichage des images */}
       <div className="medias">

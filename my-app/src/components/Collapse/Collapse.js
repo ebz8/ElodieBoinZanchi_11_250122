@@ -1,5 +1,5 @@
 import './Collapse.scss'
-import { useEffect, useState, useRef } from 'react'
+import { useState } from 'react'
 
 import { ReactComponent as CloseIcon } from '../../assets/icons/chevron-down.svg'
 
@@ -10,12 +10,10 @@ export default function Collapse(props) {
   const toggleState = () => {
     setToggle(!toggle)
   }
-
-  // rajouter une animation pour la hauteur plutôt que display none
   
     return (
 
-      <div className="collapse">
+      <div className="collapse" aria-label="Contenu dépliable">
       {/* barre */}
         <button
         onClick={toggleState}
@@ -39,15 +37,14 @@ export default function Collapse(props) {
         aria-hidden={toggle ? 'false' : 'true'}
         >
 
-        {/* contenu = liste */}
+        {/* si contenu = liste */}
         {props.liste &&
           <ul>
             {props.liste.map(item => <li key={item.toString()}>{item}</li>)}
           </ul>}
-
-        {/* contenu = paragraphe */}
+        {/* si contenu = paragraphe */}
         {props.texte && 
-          <p aria-hidden={toggle ? 'true' : 'false'}>{props.texte}</p>}
+          <p>{props.texte}</p>}
 
         </div>
       </div>

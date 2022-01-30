@@ -3,9 +3,9 @@ $borderRadius: .5rem;
 
 .collapse {
     max-width: 60rem;
+    width: 100%;
     height: auto;
-    margin-bottom: 1rem;
-    background-color: hsl(0, 0%, 96%);
+    margin-bottom: 2rem;
     border-radius: $borderRadius;
     
     .collapse-bar{
@@ -34,15 +34,23 @@ $borderRadius: .5rem;
     }
 
     .collapse-content{
-        color: hsl(0, 100%, 69%);
         display: none;
+        height: 100%;
+        overflow: hidden;
         padding : 2rem 1rem 1rem;
+        color: hsl(0, 100%, 69%);
+        border-radius: 0 0 $borderRadius $borderRadius;
         // opacity: 0;
         // transition: opacity .1s ease-in-out, height .3s .1s ease-in-out;
 
         &[aria-hidden="false"] {
+            z-index: -2;
+            position: relative;
             opacity: 1;
-            display: block;
+            display: flex;
+            flex: 1 1;
+            margin-top: -1rem;
+            background-color: hsl(0, 0%, 96%);
         }
     }
 

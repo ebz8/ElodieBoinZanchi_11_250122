@@ -40,8 +40,8 @@ export default function Gallery() {
         return (
             //   <div className='gallery'>
                   <ul className='gallery'>
-                      {housings.map((housing) => {
-                          return <Thumbnail { ...housing}/>
+                      {housings.map((housing, index) => {
+                          return <Thumbnail key={index} { ...housing}/>
                       })}
                   </ul>
             //   </div>

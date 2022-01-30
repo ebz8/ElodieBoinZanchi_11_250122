@@ -1,0 +1,13 @@
+$mainColor: hsl(0, 100%, 69%);
+
+.housing-infos {
+        display: flex;
+        justify-content: space-between;
+        color: $mainColor;
+
+        .infos-section {
+            display: flex;
+            flex-flow: column wrap;
+            // gap: 1rem;
+        }
+}

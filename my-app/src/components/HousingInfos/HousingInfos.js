@@ -1,19 +1,20 @@
+import './HousingInfos.scss'
+
 import HousingTitle from "../HousingTitle/HousingTitle"
-import Tag from "../Tag/Tag"
+import Tags from "../Tags/Tags"
 import Host from "../Host/Host"
 import Rate from "../Rate/Rate"
 
+
 export default function HousingInfos(props) {
   return (
-    <div className='infos'>
+    <div className='housing-infos'>
             <div className='infos-section'>
                 <HousingTitle titre={props.title} localisation={props.location}/>
-                <ul className='tags'>
-                    {props.tags.map((tagItem, index) => <Tag key={index} nom={tagItem}/>)}
-                </ul>
+                <Tags listeTags={props.tags}/>
             </div>
             <div className='infos-section'>
-                <Host />
+                <Host name={props.host.name} picture={props.host.picture} />
                 <Rate />
             </div> 
         </div>

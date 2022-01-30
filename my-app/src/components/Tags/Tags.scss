@@ -1,0 +1,16 @@
+$mainColor: hsl(0, 100%, 69%);
+
+    .tags {
+        display: flex;
+        gap: .5rem;
+        margin-top: 1.5rem;
+        font-size: .9rem;
+        font-weight: 500;
+        color: white;
+
+        .tag {
+            background-color: $mainColor;
+            padding: .3rem 1rem;
+            border-radius: .6rem;
+        }
+    }

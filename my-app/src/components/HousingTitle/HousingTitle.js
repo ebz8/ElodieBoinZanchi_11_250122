@@ -1,3 +1,5 @@
+import './HousingTitle.scss'
+
 export default function HousingTitle(props) {
   return (
     <div className="housing-title">

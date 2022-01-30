@@ -1,0 +1,15 @@
+$mainColor: hsl(0, 100%, 69%);
+
+// style des titres de la page logements
+.housing-title {
+    color: $mainColor;
+    font-weight: 500;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}

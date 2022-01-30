@@ -8,7 +8,7 @@ export default function Rate(props) {
     <ul className="rate">
       {[...Array(5)].map((star, index) => {
         return (
-          <li key="index">
+          <li key={`star${index}`}>
             {index <= props.rating ? <FilledStar/> : <EmptyStar/>}
           </li>
         )

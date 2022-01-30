@@ -8,6 +8,7 @@ $mainColor: hsl(0, 100%, 69%);
         .infos-section {
             display: flex;
             flex-flow: column wrap;
+            justify-content: space-between;
             // gap: 1rem;
         }
 }

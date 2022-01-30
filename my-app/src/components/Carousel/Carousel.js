@@ -31,31 +31,44 @@ export default function Carousel(props) {
     }
   }
 
-  return (
-    <div className="carousel" aria-label="carousel">
-
-      {/* affichage des images */}
-      <div className="medias">
-        {props.images.map((item, index)=> {
-          return (
-            <img
-              key={item}
-              aria-hidden={currentImg.index === index +1 ? "false" : "true"}
-              className="medias-item"
-              src={item}
-              alt={props.description}
-              aria-label={`${currentImg.index} / ${props.images.length}`}
-            />
-          )
-        })}
+  if (props.images.length > 1) {
+    return (
+      <div className="carousel" aria-label="carousel">
+  
+        {/* affichage des images */}
+        <div className="medias">
+          {props.images.map((item, index)=> {
+            return (
+              <img
+                key={item}
+                aria-hidden={currentImg.index === index +1 ? "false" : "true"}
+                className="medias-item"
+                src={item}
+                alt={props.description}
+                aria-label={`${currentImg.index} / ${props.images.length}`}
+              />
+            )
+          })}
+        </div>
+  
+        <BtnCarousel changeImg={prevImg} direction={"prev"}/>
+        <BtnCarousel changeImg={nextImg} direction={"next"}/>
+  
+        <span className="currentImgCount" tabIndex="0">{`${currentImg.index} / ${props.images.length}`}</span>
+  
       </div>
-
-      {/* boutons de contrôle du Carousel */}
-      <BtnCarousel changeImg={prevImg} direction={"prev"}/>
-      <BtnCarousel changeImg={nextImg} direction={"next"}/>
-      {/* compteur central */}
-      <span className="currentImgCount" tabIndex="0">{`${currentImg.index} / ${props.images.length}`}</span>
-
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className="carousel" aria-label="carousel">
+        <div className="medias">
+              <img
+                className="medias-item"
+                src={props.images}
+                alt={props.description}
+              />
+        </div>
+      </div>
+    )
+  }
 }

@@ -7,24 +7,27 @@ import BtnCarousel from './BtnCarousel'
 export default function Carousel(props) {
 
   const [currentImg, setCurrentImg] = useState({
-    index: 1,
-    navigating: false
+    index: 1
   })
 
   const nextImg = () => {
-    // si je n'ai pas atteint le dernier slide
+      // navigation dans les images suivante
     if (currentImg.index !== props.images.length) {
-      setCurrentImg({index: currentImg.index +1, navigating: true})
+      setCurrentImg({index: currentImg.index +1})
+
+      // si dernière image, retour au début
     } else if (currentImg.index === props.images.length){
-      setCurrentImg({index: 1, navigating: true})
+      setCurrentImg({index: 1})
     }
   }
 
   const prevImg = () => {
+    // navigation dans les images précédentes
     if (currentImg.index !== 1) {
-      setCurrentImg({index: currentImg.index -1, navigating: true})
+      setCurrentImg({index: currentImg.index -1})
+    // si première image, passer à la dernière
     } else if (currentImg.index === 1){
-      setCurrentImg({index: props.images.length, navigating: true})
+      setCurrentImg({index: props.images.length})
     }
   }
 

@@ -1,17 +1,44 @@
+@import '../../mixins.scss';
+
 .error404 {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-flow: column wrap;
     color: hsl(0, 100%, 69%);
+    min-height: 50vh;
+
+    .warning {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
 
     a {
-        margin: 5rem;
         text-decoration: underline;
+        font-size: rem(18);
+
+        @include tablet {
+            font-size: rem(14);
+        }
     }
 
     h2 {
-        font-size: 288px;
+        font-size: rem(288);
         font-weight: bold;
+
+        @include tablet {
+            font-size: rem(96);
+        }
+    }
+
+    h3 {
+        font-size: rem(36);
+        text-align: center;
+
+        @include tablet {
+            font-size: rem(18);
+        }
     }
 }

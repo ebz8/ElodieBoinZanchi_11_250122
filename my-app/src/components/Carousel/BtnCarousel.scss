@@ -1,15 +1,22 @@
-.Carousel-btn {
-    width: 2rem;
+.carousel-btn {
+    position: absolute;
+    height: 100%;
+    width: 3rem;
+    background-color: transparent;
+    cursor: pointer;
 
-    .prev {
-        top: 50%;
-        left: 1rem;
-        transform: translateY(-60%);
+    svg {
+        width: 1rem;
+        color: white;
     }
 
-    .next {
-        top: 50%;
-        right: 1rem;
-        transform: translateY(-60%);
+    &.prev {
+        left: 0rem;
+        padding-left: 1rem;
+    }
+
+    &.next {
+        padding-right: 1rem;
+        right: 0rem;
     }
 }

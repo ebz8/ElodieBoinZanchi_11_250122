@@ -1,8 +1,7 @@
-// style composant Home
+@import '../../mixins.scss';
 
+// style de la page d'accueil
 .banner {
-    // filtre dégradé : proposer via une classe plutôt ?
-    // ou mixin pour la gestion du dégradé
     &:after {
         content: '';
         z-index: -1;

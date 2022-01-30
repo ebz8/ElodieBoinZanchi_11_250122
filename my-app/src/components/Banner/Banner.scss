@@ -1,25 +1,41 @@
+@import '../../mixins.scss';
+
 // style de Banner
 .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 100%;
-    margin: 1.5rem 0;
+    height: rem(223);
     border-radius: 1.1rem;
-    overflow: hidden;    
+    overflow: hidden;
+    
+    @include mobile-large {
+        margin: 0;
+        height: 255px;
+    }
 
     img {
         z-index: -1;
         position: relative;
         display: block;
         width: 100%;
+        height: 100%;
         object-fit: cover;
+        object-position: top center;
+
+        @include mobile-large {
+            object-position: right bottom;
+        }
     }
 
     .title {
+
         z-index: 2;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
+        padding: 1rem;
+        font-size: rem(48);
+        color: $bgColor;
     }
 }

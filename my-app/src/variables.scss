@@ -1,0 +1,28 @@
+// variables communes au projet Kasa
+
+// gestion des rem
+$html-font-size: 16px;@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+// palette de couleurs
+$bgColor: hsl(0, 0%, 100%);
+$mainColor: hsl(0, 100%, 69%);
+
+// breakpoints
+//
+$mobile: 345px;
+$mobile-large: 590px;
+$tablet: 805px;
+$small-desk: 1012px;
+$large-desk: 1280px;
+
+$breakpoint: (
+    mobile: $mobile,
+    mobile-large: $mobile-large,
+    tablet: $tablet,
+    small-desk: $small-desk,
+    large-desk: $large-desk
+) !default;

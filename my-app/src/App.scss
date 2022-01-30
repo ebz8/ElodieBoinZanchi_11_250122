@@ -1,16 +1,12 @@
+@import './variables.scss';
+@import './mixins.scss';
+
 // style de base de l'app Kasa
-
-// comment gérer les variables et mixins ?
-$bgColor: hsl(0, 0%, 100%);
-$mainColor: hsl(0, 100%, 69%);
-// $marginBase: .5rem 4rem 0rem;
-
 body {
   background-color: $bgColor;
   font-family: 'Montserrat', sans-serif;
 }
 
-// pousser le footer en bas de la page
 .App {
   min-height: 100vh;
   display: flex;
@@ -19,6 +15,10 @@ body {
 
 main {
   margin: 1rem 4rem;
+
+  @include mobile-large {
+    margin : 0 1rem 1rem;
+  }
 }
 
 a {

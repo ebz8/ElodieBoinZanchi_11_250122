@@ -1,8 +1,19 @@
+import './Rate.scss'
+import { ReactComponent as FilledStar } from '../../assets/icons/star-filled.svg'
+import { ReactComponent as EmptyStar } from '../../assets/icons/star-empty.svg'
 
-export default function Rate() {
+
+export default function Rate(props) {
   return (
-    <div>
-      
-    </div>
+    <ul className="rate">
+      {[...Array(5)].map((star, index) => {
+        return (
+          <li key="index">
+            {index <= props.rating ? <FilledStar/> : <EmptyStar/>}
+          </li>
+        )
+        
+      })}
+    </ul>
   )
 }

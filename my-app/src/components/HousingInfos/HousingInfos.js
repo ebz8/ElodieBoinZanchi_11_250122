@@ -15,7 +15,7 @@ export default function HousingInfos(props) {
             </div>
             <div className='infos-section'>
                 <Host name={props.host.name} picture={props.host.picture} />
-                <Rate />
+                <Rate rating={props.rating}/>
             </div> 
         </div>
   )

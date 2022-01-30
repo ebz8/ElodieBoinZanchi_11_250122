@@ -1,7 +1,17 @@
-// style du composant de notation de l'hôte
+@import '../../mixins.scss';
 
+// style du composant de notation de l'hôte
 .rate {
     display: flex;
     flex-flow: row nowrap;
     margin-top: 1rem;
+
+    svg {
+        width: rem(36);
+
+        @include mobile {
+            width: rem(18);
+        }
+    }
+
 }

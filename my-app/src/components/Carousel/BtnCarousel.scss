@@ -1,22 +1,20 @@
+@import '../../mixins.scss';
+
 .carousel-btn {
-    position: absolute;
-    height: 100%;
-    width: 3rem;
-    background-color: transparent;
     cursor: pointer;
+    height: 100%;
+    background-color: transparent;
 
     svg {
-        width: 1rem;
+        width: rem(96);
         color: white;
-    }
 
-    &.prev {
-        left: 0rem;
-        padding-left: 1rem;
-    }
+        @include tablet {
+            width: rem(56);
+        }
 
-    &.next {
-        padding-right: 1rem;
-        right: 0rem;
+        @include mobile-large {
+            width: rem(24);
+        }
     }
 }

@@ -23,7 +23,7 @@ export default function Collapse(props) {
         aria-controls="collapse-content"
         aria-expanded={toggle ? 'true' : 'false'}
         >
-          <h2>{props.titre}</h2>
+          {props.titre}
           <CloseIcon
             alt="Déplier / Replier"
             className={toggle ? 'close-icon open' : 'close-icon'}

@@ -1,13 +1,25 @@
-// style des pages logement
+@import '../../mixins.scss';
 
+// style des pages logement
 .housing {
     display: flex;
     flex-flow: column wrap;
     gap: 1.5rem;
 
+    @include mobile {
+        flex-flow: row wrap;
+    }
+
     .collapses {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+        gap: 2rem;
+
+        @include mobile-large {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            gap: 1rem;
+        }
     }
 }

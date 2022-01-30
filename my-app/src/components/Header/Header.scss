@@ -8,6 +8,7 @@
 
     @include tablet {
         margin: 1rem 1rem  0 1rem;
+        align-items: center;
     }
 
     .logo {
@@ -15,7 +16,7 @@
 
         @include tablet {
             width: rem(145);
-            margin : 0;
+            margin : 1rem 1rem 0 1rem;
         }
 
         @include mobile {

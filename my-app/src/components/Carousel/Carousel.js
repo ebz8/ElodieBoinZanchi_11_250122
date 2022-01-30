@@ -50,9 +50,11 @@ export default function Carousel(props) {
             )
           })}
         </div>
-  
-        <BtnCarousel changeImg={prevImg} direction={"prev"}/>
-        <BtnCarousel changeImg={nextImg} direction={"next"}/>
+        
+          <div className="carousel-controls">
+            <BtnCarousel changeImg={prevImg} direction={"prev"}/>
+            <BtnCarousel changeImg={nextImg} direction={"next"}/>
+          </div>
   
         <span className="currentImgCount" tabIndex="0">{`${currentImg.index} / ${props.images.length}`}</span>
   

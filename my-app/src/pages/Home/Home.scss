@@ -2,6 +2,12 @@
 
 // style de la page d'accueil
 .banner {
+    margin-bottom: $elementMargin;
+
+    @include mobile-large {
+        margin-bottom: 1rem;
+    }
+    
     &:after {
         content: '';
         z-index: -1;

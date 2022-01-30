@@ -11,9 +11,13 @@
     border-radius: 1.1rem;
     overflow: hidden;
     
-    @include mobile-large {
+    @include tablet {
         margin: 0;
         height: 255px;
+    }
+
+    @include mobile-large {
+        height: rem(111);
     }
 
     img {
@@ -31,11 +35,18 @@
     }
 
     .title {
-
         z-index: 2;
         position: absolute;
         padding: 1rem;
         font-size: rem(48);
         color: $bgColor;
+
+        @include small-desk {
+            font-size: rem(30);
+        }
+
+        @include mobile-large {
+            font-size: rem(24);
+        }
     }
 }

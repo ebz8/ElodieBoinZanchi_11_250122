@@ -4,16 +4,16 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 1rem 4rem 0 4rem;
+    margin: $elementMargin $bodyMargin 0 $bodyMargin;
 
-    @include mobile-large {
-        margin: 1rem 1rem 0 1rem;
+    @include tablet {
+        margin: 1rem 1rem  0 1rem;
     }
 
     .logo {
         width: 16vw;
 
-        @include mobile-large {
+        @include tablet {
             width: rem(145);
             margin : 0;
         }

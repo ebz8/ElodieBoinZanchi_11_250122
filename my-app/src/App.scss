@@ -14,7 +14,11 @@ body {
 }
 
 main {
-  margin: 1rem 4rem;
+  margin: $elementMargin $bodyMargin;
+
+  @include tablet {
+    margin : $elementMargin;
+  }
 
   @include mobile-large {
     margin : 0 1rem 1rem;

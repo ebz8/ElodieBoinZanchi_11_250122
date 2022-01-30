@@ -10,6 +10,11 @@ $html-font-size: 16px;@function stripUnit($value) {
 // palette de couleurs
 $bgColor: hsl(0, 0%, 100%);
 $mainColor: hsl(0, 100%, 69%);
+$neutralColor: hsl(0, 0%, 96%);
+
+// gesion des marges
+$elementMargin: rem(40);
+$bodyMargin: rem(100);
 
 // breakpoints
 //

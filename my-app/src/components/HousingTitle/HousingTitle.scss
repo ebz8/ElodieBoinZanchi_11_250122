@@ -1,4 +1,4 @@
-$mainColor: hsl(0, 100%, 69%);
+@import '../../mixins.scss';
 
 // style des titres de la page logements
 .housing-title {
@@ -6,10 +6,19 @@ $mainColor: hsl(0, 100%, 69%);
     font-weight: 500;
 
     h2 {
-        font-size: 2rem;
+        font-size: rem(36);
+
+        @include mobile-large {
+            font-size: rem(18);
+        }
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: rem(18);
+
+        @include mobile-large {
+            font-size: rem(14);
+        }
+
     }
 }

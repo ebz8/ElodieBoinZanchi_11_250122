@@ -3,8 +3,14 @@
 
 // style de base de l'app Kasa
 body {
+  margin: auto;
+  max-width: rem(1440);
   background-color: $bgColor;
   font-family: 'Montserrat', sans-serif;
+
+  @include large-desk {
+    margin: 0;
+  }
 }
 
 .App {

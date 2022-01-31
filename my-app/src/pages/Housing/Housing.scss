@@ -8,6 +8,7 @@
 
     @include mobile {
         flex-flow: row wrap;
+        gap: 1rem;
     }
 
     .collapses {

@@ -6,6 +6,10 @@
     flex-flow: row nowrap;
     margin-top: 1rem;
 
+    @include mobile-large {
+        margin-top: .5rem;
+    }
+
     svg {
         width: rem(36);
 

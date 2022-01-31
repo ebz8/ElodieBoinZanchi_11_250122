@@ -4,11 +4,16 @@
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: $elementMargin $bodyMargin 0 $bodyMargin;
 
     @include tablet {
-        margin: 1rem 1rem  0 1rem;
+        margin: $elementMargin $elementMargin  0 $elementMargin;
         align-items: center;
+    }
+
+    @include mobile-large {
+        margin : 1rem 1rem 0 1rem;
     }
 
     .logo {
@@ -16,9 +21,8 @@
 
         @include tablet {
             width: rem(145);
-            margin : 1rem 1rem 0 1rem;
         }
-
+        
         @include mobile {
             width: rem(120);
         }
@@ -26,13 +30,21 @@
 
     .navigation {
         display: flex;
-        margin-top: 2rem;
         font-weight: 500;
         font-size: rem(24);
+        gap: rem(65);
+
+        @include tablet {
+            gap: rem(21);
+        }
 
         @include mobile-large {
             text-transform: uppercase;
             font-size: rem(12);
+        }
+
+        @include mobile-small {
+            gap: rem(5);
         }
     
         li{

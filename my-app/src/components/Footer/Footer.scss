@@ -13,7 +13,7 @@
     font-size: rem(24);
     margin-top: auto;
 
-    @include tablet {
+    @include mobile-large {
         font-size: rem(12);
     }
 

@@ -18,13 +18,15 @@ $bodyMargin: rem(100);
 
 // breakpoints
 //
-$mobile: 375px;
+$mobile-small: 350px;
+$mobile: 380px;
 $mobile-large: 590px;
-$tablet: 805px;
+$tablet: 820px;
 $small-desk: 1012px;
-$large-desk: 1280px;
+$large-desk: 1440px;
 
 $breakpoint: (
+    mobile-small: $mobile-small,
     mobile: $mobile,
     mobile-large: $mobile-large,
     tablet: $tablet,

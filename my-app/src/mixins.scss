@@ -1,6 +1,12 @@
 @import './variables.scss';
 
 // Gestion du responsive
+@mixin mobile-small{
+  @media screen and (max-width: map-get($breakpoint, mobile-small)){
+    @content;
+  }
+}
+
 @mixin mobile{
     @media screen and (max-width: map-get($breakpoint, mobile)){
       @content;

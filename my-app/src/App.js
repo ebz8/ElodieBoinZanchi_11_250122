@@ -1,5 +1,6 @@
 import './App.scss'
 import {Routes, Route} from "react-router-dom"
+// import { useLocation } from 'react-router-dom'
 
 // fonts
 import '../src/assets/fonts/fonts.scss'
@@ -15,6 +16,8 @@ import Error404 from './pages/Error404/Error404'
 
 
 function App() {
+    // const location = useLocation()
+
   return (
       <div className="App">
       <Header />
@@ -27,6 +30,8 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      {/* {location.pathname === "/" || "/housing/:id" || "/about" ?  <Footer /> : null}  */}
+
       </div>
   );
 }

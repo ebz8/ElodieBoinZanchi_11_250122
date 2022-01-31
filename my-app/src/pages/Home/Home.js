@@ -4,8 +4,6 @@ import Gallery from '../../components/Gallery/Gallery'
 import './Home.scss'
 import bannerImg from '../../assets/banniere-accueil.png'
 
-// import { Data } from '../../data/logements'
-
 export default function Home() {
     return (
         <div className='home'>

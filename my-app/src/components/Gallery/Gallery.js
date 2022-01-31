@@ -3,6 +3,8 @@ import './Gallery.scss'
 import Thumbnail from '../Thumbnail/Thumbnail'
 import { useEffect, useState } from 'react'
 
+import Loader from '../Loader/Loader'
+
 export default function Gallery() {
     // fetching data
     const [error, setError] = useState(null)
@@ -28,34 +30,11 @@ export default function Gallery() {
         fetchData()
       }, [])
 
-    if (error) {
-        // gestion des erreurs ici
-        return <div>Erreur : {error.message}</div>  
-    } else if (!isLoaded) {
-        // insérer ici un loader
-        return <div>Chargement...</div>
+      return error ? <div>Erreur : {error.message}</div>
+      : !isLoaded ? <Loader />
+      : <ul className='gallery'>
+            {housings.map((housing, index) => {
+                return <Thumbnail key={index} { ...housing}/>
+            })}
+        </ul>
     }
-
-    else {
-        return (
-            //   <div className='gallery'>
-                  <ul className='gallery'>
-                      {housings.map((housing, index) => {
-                          return <Thumbnail key={index} { ...housing}/>
-                      })}
-                  </ul>
-            //   </div>
-          )
-    }
-}
-
-    // const createHousing = housing => {
-    //     return (
-    //     <li key={housing.id}>
-    //         <Link to={`/housing/${housing.id}`}>
-    //             <img src={housing.pictures[0]} alt={housing.title} />
-    //             <h3>{housing.title}</h3>                
-    //         </Link>
-    //     </li>
-    //     )
-    // }

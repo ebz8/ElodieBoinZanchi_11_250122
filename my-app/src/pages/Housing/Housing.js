@@ -5,7 +5,7 @@ import './Housing.scss'
 import Collapse from '../../components/Collapse/Collapse'
 import Carousel from '../../components/Carousel/Carousel'
 import HousingInfos from '../../components/HousingInfos/HousingInfos'
-
+import Loader from '../../components/Loader/Loader'
 
 export default function Housing() {
     // récupère l'id du logement en cours
@@ -35,23 +35,15 @@ export default function Housing() {
     useEffect(() => {
         fetchData()    
       }, [])
-    
-      if (error) {
-        // gestion des erreurs ici
-        return <div>Erreur : {error.message}</div>  
-    } else if (!isLoaded) {
-        // insérer ici un loader
-        return <div>Chargement...</div>
-    } else {
-        return (
-            <div className='housing'>
-                <Carousel images={currentHousing.pictures} description={currentHousing.title}/>
-                <HousingInfos {...currentHousing}/>
-                <div className="collapses">
-                    <Collapse titre="Description" texte={currentHousing.description}/>
-                    <Collapse titre="Équipements" liste={currentHousing.equipments}/>
-                </div>
-            </div>
-          )
-        }
-    }
+
+    return error ? <div>Erreur : {error.message}</div>
+    : !isLoaded ? <Loader />
+    : <div className='housing'>
+        <Carousel images={currentHousing.pictures} description={currentHousing.title}/>
+        <HousingInfos {...currentHousing}/>
+        <div className="collapses">
+            <Collapse titre="Description" texte={currentHousing.description}/>
+            <Collapse titre="Équipements" liste={currentHousing.equipments}/>
+        </div>
+    </div>;
+}

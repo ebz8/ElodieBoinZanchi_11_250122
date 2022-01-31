@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ebz8/ElodieBoinZanchi_11_250122/static/css/main.fe291b28.css",
+    "main.js": "/ebz8/ElodieBoinZanchi_11_250122/static/js/main.6e547b2a.js",
+    "static/media/banniere-apropos.png": "/ebz8/ElodieBoinZanchi_11_250122/static/media/banniere-apropos.9e06142d802a5b4dd649.png",
+    "static/media/banniere-accueil.png": "/ebz8/ElodieBoinZanchi_11_250122/static/media/banniere-accueil.5a4a9413e75e16758ec9.png",
+    "static/media/logo.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/logo.a6101328193bb3191cbcb50c120ec0d1.svg",
+    "static/media/logo-white.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/logo-white.ee689fd9409d1b5a898b4247819d8a00.svg",
+    "index.html": "/ebz8/ElodieBoinZanchi_11_250122/index.html",
+    "static/media/chevron-down.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/chevron-down.a4f409dd60b89c8a341c1d9830ae0043.svg",
+    "static/media/chevron-left.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/chevron-left.3529f3989e39b758930113b6f7a3d1d4.svg",
+    "static/media/chevron-right.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/chevron-right.20f8ff01b05f9ea0cf55933722f7806c.svg",
+    "static/media/star-empty.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/star-empty.38752bcafc1045fa6b545169fb0eb2eb.svg",
+    "static/media/star-filled.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/star-filled.a21f8abfc51a23975832b769119429bd.svg",
+    "main.fe291b28.css.map": "/ebz8/ElodieBoinZanchi_11_250122/static/css/main.fe291b28.css.map",
+    "main.6e547b2a.js.map": "/ebz8/ElodieBoinZanchi_11_250122/static/js/main.6e547b2a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe291b28.css",
+    "static/js/main.6e547b2a.js"
+  ]
+}

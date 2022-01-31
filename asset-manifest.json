@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ebz8/ElodieBoinZanchi_11_250122/static/css/main.fe291b28.css",
-    "main.js": "/ebz8/ElodieBoinZanchi_11_250122/static/js/main.6e547b2a.js",
+    "main.js": "/ebz8/ElodieBoinZanchi_11_250122/static/js/main.e4b687a2.js",
     "static/media/banniere-apropos.png": "/ebz8/ElodieBoinZanchi_11_250122/static/media/banniere-apropos.9e06142d802a5b4dd649.png",
     "static/media/banniere-accueil.png": "/ebz8/ElodieBoinZanchi_11_250122/static/media/banniere-accueil.5a4a9413e75e16758ec9.png",
     "static/media/logo.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/logo.a6101328193bb3191cbcb50c120ec0d1.svg",
@@ -13,10 +13,10 @@
     "static/media/star-empty.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/star-empty.38752bcafc1045fa6b545169fb0eb2eb.svg",
     "static/media/star-filled.svg": "/ebz8/ElodieBoinZanchi_11_250122/static/media/star-filled.a21f8abfc51a23975832b769119429bd.svg",
     "main.fe291b28.css.map": "/ebz8/ElodieBoinZanchi_11_250122/static/css/main.fe291b28.css.map",
-    "main.6e547b2a.js.map": "/ebz8/ElodieBoinZanchi_11_250122/static/js/main.6e547b2a.js.map"
+    "main.e4b687a2.js.map": "/ebz8/ElodieBoinZanchi_11_250122/static/js/main.e4b687a2.js.map"
   },
   "entrypoints": [
     "static/css/main.fe291b28.css",
-    "static/js/main.6e547b2a.js"
+    "static/js/main.e4b687a2.js"
   ]
 }

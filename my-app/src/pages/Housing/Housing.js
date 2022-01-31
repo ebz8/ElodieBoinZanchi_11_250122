@@ -33,7 +33,7 @@ export default function Housing() {
             )
         }
         fetchData()    
-      }, [currentHousingId, setCurrentHousing])
+    }, [currentHousingId, setCurrentHousing])
 
     return error ? <div>Erreur : {error.message}</div>
     : !isLoaded ? <Loader />

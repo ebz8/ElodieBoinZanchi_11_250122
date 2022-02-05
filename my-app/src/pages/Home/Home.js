@@ -31,7 +31,7 @@ export default function Home() {
         fetchData()
       }, [])
 
-      return error ? <div>Erreur : {error.message}</div>
+      return error ? <p>Erreur : {error.message}</p>
       : !isLoaded ? <Loader />
       : <div className='home'>
             <Banner img={bannerImg} alt="bannière" texte ="Chez vous, partout et ailleurs"/>

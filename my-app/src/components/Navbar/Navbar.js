@@ -20,6 +20,6 @@ export default function Navbar() {
             </NavLink>
         </li>
     </ul>
-</nav>
+    </nav>
   )
 }

@@ -35,7 +35,7 @@ export default function Housing() {
         fetchData()    
     }, [currentHousingId, setCurrentHousing])
 
-    return error ? <div>Erreur : {error.message}</div>
+    return error ? <p>Erreur : {error.message}</p>
     : !isLoaded ? <Loader />
     : <div className='housing'>
         <Carousel images={currentHousing.pictures} description={currentHousing.title}/>

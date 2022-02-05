@@ -32,6 +32,7 @@ export default function Carousel(props) {
   }
 
   if (props.images.length > 1) {
+  // si plusieurs images dans le carrousel
     return (
       <div className="carousel" aria-label="carousel">
   
@@ -61,6 +62,7 @@ export default function Carousel(props) {
       </div>
     )
   } else {
+    // si une seule image dans le carrousel
     return (
       <div className="carousel" aria-label="carousel">
         <div className="medias">
